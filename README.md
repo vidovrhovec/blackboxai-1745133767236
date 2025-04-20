@@ -109,6 +109,39 @@ The license is closed, which means you can upgrade, review, and improve the code
 
 ---
 
+## Troubleshooting
+
+### Qt Platform Plugin "xcb" Error
+
+If you encounter the following error when running the PyQt6 application:
+
+```
+qt.qpa.plugin: From 6.5.0, xcb-cursor0 or libxcb-cursor0 is needed to load the Qt xcb platform plugin.
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
+This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vkkhrdisplay, vnc, wayland-egl, wayland, xcb.
+```
+
+This usually means that the required Qt platform plugin dependencies are missing from your system.
+
+#### Solution
+
+On Debian/Ubuntu-based systems, install the following packages:
+
+```bash
+
+sudo apt-get update && sudo apt-get install -y libxcb-xinerama0 libxcb-cursor0
+
+```
+
+On other Linux distributions, install the equivalent packages that provide the `xcb` platform plugin and its dependencies.
+
+After installing these packages, try running the PyQt6 application again.
+
+---
+
 ## Contact
 
 For questions or support, please contact the project maintainer.
+
