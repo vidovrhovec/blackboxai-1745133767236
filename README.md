@@ -3,7 +3,7 @@
 This project consists of two main components:
 
 1. **Flask Web Application**  
-   A simple Flask server that serves a web page with a personalized greeting. Users can enter their name, submit it, and receive a customized greeting on the page.
+   A simple Flask server that serves a web page with a personalized workspace. Users can enter their name, submit it, and receive a customized workspace on the page.
 
 2. **PyQt6 Desktop Application**  
    A feature-rich code editor and workspace manager built with PyQt6. It includes prompt management, API configuration for AI integration, workflow saving/loading, and terminal output. The app supports managing URL and file references and sending commands to an AI model via API.
